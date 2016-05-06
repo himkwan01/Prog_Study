@@ -1,0 +1,9 @@
+multiple classes in one file:
+	file name equal to the public class
+in different files:
+	file whose name has to be equal to public class name
+	compile:
+		//a is public class
+		javac a.java b.java
+	run:
+		java a

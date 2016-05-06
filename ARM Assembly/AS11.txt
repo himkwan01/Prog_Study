@@ -1,0 +1,20 @@
+# Makefile
+/* call makefile make filename */
+/* e.g. make t1 (t1.s is the source file)*/
+all: main
+
+$@ : $<
+	as -o $@ $<		/* create object file */
+ 
+$@: $+
+	gcc -o $@ $+	/* create prog file */
+ 
+clean:
+	rm -vf *.o		/* remove all object file */
+
+/* make ends */
+
+ldr r1, =str /* =str equals to the address of str */
+
+ldr r1, addr_a		/* load var only can use addr and []
+ldr r1, [r1]
