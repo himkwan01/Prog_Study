@@ -1,0 +1,21 @@
+command mode
+:wq             save and quit
+:w              save
+:q              quit
+:q!             quit without save
+:qa             quit all
+:wqa            save and quit all
+:vs file        open another file in vertical split
+:sp file        open another file in horizontal split
+^w s            split current file in horizontal
+^w v            split current file in vertical
+:set nu         display number line
+nG              go to line n
+gg              go to first line
+G               go to last line
+v               visual mode
+V               visual mode select whole line
+dd              delete current line
+o               insert newline after current line
+O               insert newline before current line
+x               delete current character
