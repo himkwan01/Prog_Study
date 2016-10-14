@@ -1,0 +1,6 @@
+Script note
+$# = total paras are get from stdin
+$@ = all paras value saparate [ "$1" "$2 "$3" ]
+$* = all paras value in one string [ "$1 $2 $3" ]
+
+shift n, throw $n 
