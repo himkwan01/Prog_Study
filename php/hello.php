@@ -5,6 +5,9 @@
     </head>
     <body>
         // php tag
-        <?php echo '<p>Hello World</p>'; ?>
+        <?php
+            // separate with a dot (.)
+            echo "hello "."world"; 
+        ?>
     </body>
 </html>
