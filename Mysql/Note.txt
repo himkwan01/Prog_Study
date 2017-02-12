@@ -1,0 +1,12 @@
+in console
+get to the server
+mysql -u username -p
+pw
+
+show databases;
+
+create database whatever_the_name
+
+import sql to database
+use database_name //select the database to import sql
+source path       //get the path
