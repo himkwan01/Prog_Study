@@ -72,7 +72,6 @@ function symmetric_decrypt($string, $key, $cipher_method=CIPHER_METHOD) {
   return $plaintext;
 }
 
-
 // Asymmetric Encryption / Public-Key Cryptography
 
 // Cipher configuration to use for asymmetric encryption
