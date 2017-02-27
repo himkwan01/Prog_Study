@@ -4,6 +4,26 @@
  * Created at: 02/20/2017
  -----------------------------------------------------------------------------*/
 
+/*------------------------------------------------------------------------------
+ * Function Name: str_rot
+ * Purpose:       encrypt the string by shifting 
+ * Description:
+ * Input:         $string:        string to be encrypted
+ *                $rot:           shift index
+ * Output:        Cipher string
+ -----------------------------------------------------------------------------*/
+function str_rot($string, $rot=-13){
+  $letters = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz';
+  // %26 allows rot larger than 26
+  // doubled letters = double rotated
+  $double_rot = ((int)$rot%26)*2;
+  if($double_rot == 0) {return $string;}
+  // build shifted letter map ($dbl_rot to end + start to $dbl_rot)
+  $map = substr($letters, $double_rot) . substr($letters, 0, $double_rot);
+  // strtr does the substitutions between $letters and $map
+  return strtr($string, $letters, $map);
+}
+ 
 // Cipher method to use for symmetric encryption
 const CIPHER_METHOD = 'AES-256-CBC';
 
@@ -16,7 +36,7 @@ const CIPHER_METHOD = 'AES-256-CBC';
  * Input:         $string:        string to be encrypted
  *                $key:           the key to encrypt the string
  *                $cipher_method: encrypt method
- * Output:        Encrypted string
+ * Output:        Cipher string
  -----------------------------------------------------------------------------*/
 function symmetric_encrypt($string, $key, $cipher_method=CIPHER_METHOD) {
   
