@@ -1,0 +1,103 @@
+struct Node {
+    Node left;
+    Node right;
+    Node next;
+}
+
+    1-null
+  2 - 3 - null
+ 45 67
+ 
+ 
+    1-null
+  2 - 3 - null
+ 45  6 7
+ 
+ 
+            1-null        0
+      2 -     3 - null   1
+   4   5          0
+8 9   10 11       14 15    
+ 
+ 
+ arrnode  1 23 45 0 0 8 9 10 11 0 0 14 15
+ 
+ int lv = 0
+ int count=0;
+ int node_lv 
+ 
+ for(int j=0;jlog2(n);j++){
+ 
+     node_lv = pow(2,lv);
+     for(int i=0;inode_lv-1;i++){
+         if(node[i+count]){
+             int temp = 1;
+             while(!node[i+count+temp] && i+count+tempcount+node_lv-1)                 
+                     temp++; 
+             node[i+count]-next = node[i+count+1];
+         }
+     count += node_lv
+     lv++;
+ }
+ Node temp = root;
+ while(temp){
+     if(temp-left){
+         temp-leftnext = temp-right;
+         temp = temp-left;
+     }
+ }
+ temp = root-right;
+ while(temp){
+     if(temp-left){
+         temp-leftnext = temp-right;
+         temp = temp-left;
+     }
+ }
+ 
+
+
+[1, 2, 3, ..., n]
+
+1 123 123
+2 132
+3 213 
+231
+312
+321
+
+n amount of numbers 1 - n
+kth permutation
+
+n = 3
+k = 2
+- 132
+
+
+n = 4 
+k = 2
+1 1234
+2 1243
+3  1324
+4  1342
+5  1423
+6  1432
+
+7  2 134 1
+8  2 143 2
+9  2 314 3
+10 2 341 4
+11 2 413 5
+12 2 431 6
+
+13 - 18
+19 - 24
+19 4123
+n=4
+k=19
+first = 4
+first didgit = k(n-1)! = 4 , setint s.insert(4);
+second digit
+(first digit) k= k%(n-1)! = 1
+second = (k-1)(n-2)! + 1 = 2, if(!s.insert(1).second)s.insert(2);
+
+
