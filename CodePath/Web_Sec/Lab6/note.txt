@@ -1,0 +1,2 @@
+hashcat --potfile-disable -m 0 -a -0 pw_hash1.txt rockyou.txt
+won't check potfile for previous crack record
